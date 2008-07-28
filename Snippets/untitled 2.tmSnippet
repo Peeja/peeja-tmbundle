@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>NSUndoManager *undo = [self undoManager];</string>
+	<key>name</key>
+	<string>Undo Manager</string>
+	<key>scope</key>
+	<string>meta.implementation.objc, meta.implementation.objc++</string>
+	<key>tabTrigger</key>
+	<string>undo</string>
+	<key>uuid</key>
+	<string>D47EA8DA-3EB0-4DAA-BD3D-1636A66F1CA3</string>
+</dict>
+</plist>

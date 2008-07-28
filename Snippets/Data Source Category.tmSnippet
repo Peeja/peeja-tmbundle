@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>@interface ${1:${TM_FILENAME/^(.*)\..*/$1/}} (${2:NSTableDataSource})
+
+- (int)numberOfRowsInTableView:(NSTableView *)aTableView;
+- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex;
+
+@end
+
+@implementation ${1:${TM_FILENAME/^(.*)\..*/$1/}} (${2:NSTableDataSource})
+
+- (int)numberOfRowsInTableView:(NSTableView *)aTableView
+{
+    return ${3:rows};
+}
+
+- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(int)rowIndex
+{
+    return ${4:object};
+}
+
+@end
+
+@implementation AppController (NSTableViewDataSource)
+
+
+@end
+</string>
+	<key>name</key>
+	<string>Data Source Category</string>
+	<key>scope</key>
+	<string>source.objc, source.objc++</string>
+	<key>tabTrigger</key>
+	<string>dscat</string>
+	<key>uuid</key>
+	<string>C899CEC4-81B7-426F-8C4D-D74E2BB9FA2C</string>
+</dict>
+</plist>

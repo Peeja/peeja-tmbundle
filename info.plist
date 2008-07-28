@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Peter Jaros’s Bundle</string>
+	<key>ordering</key>
+	<array>
+		<string>64AD0FD7-B3DD-46F7-8AC6-678D05BEBA70</string>
+		<string>566FE249-7A98-4D35-B8FA-85DD1A2679DA</string>
+		<string>C899CEC4-81B7-426F-8C4D-D74E2BB9FA2C</string>
+		<string>588174B2-E597-4C3E-910C-0C64D27CA915</string>
+		<string>D47EA8DA-3EB0-4DAA-BD3D-1636A66F1CA3</string>
+		<string>CF55355B-35D5-469F-9FE5-6975D458CD26</string>
+		<string>8D4966D2-5A3D-45A5-9CA6-D3CDB4ACA466</string>
+		<string>5667A7CD-7B3F-4DB5-8D06-C0A781B0E61C</string>
+		<string>8F0C8A64-44BF-4E84-8257-56CC26DA7558</string>
+		<string>EE1F8A91-52F0-4D62-8C08-2A5F68320F88</string>
+		<string>C9A9D645-B5A4-418D-A33F-4CCDBBD8E7FE</string>
+		<string>26EF0EA5-538C-4B44-A3A4-2685EB55CA4D</string>
+		<string>872EB5B4-F0AE-47EC-880A-F49287D06C3F</string>
+	</array>
+	<key>uuid</key>
+	<string>C6345479-F0AC-4506-A26D-1B95378CBB45</string>
+</dict>
+</plist>

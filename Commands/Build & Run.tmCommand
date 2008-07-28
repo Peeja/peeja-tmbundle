@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveModifiedFiles</string>
+	<key>command</key>
+	<string>osascript &lt;&lt;SCRIPT
+	tell application "Xcode"
+		set current_project to first project whose project directory is "$TM_PROJECT_DIRECTORY"
+		set build_status to build current_project
+		if build_status starts with "Build succeeded" then
+			launch current_project
+		end if
+		if build_status is not "Build succeeded"
+			get build_status
+		end
+	end tell
+SCRIPT
+</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>@r</string>
+	<key>name</key>
+	<string>Build &amp; Run</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>source.objc</string>
+	<key>uuid</key>
+	<string>D9824A9C-66AC-4543-9406-1C6BF19B3336</string>
+</dict>
+</plist>

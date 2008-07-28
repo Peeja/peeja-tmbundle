@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>[[NSNotificationCenter defaultCenter] postNotificationName:${1:name} object:${2:self}];</string>
+	<key>name</key>
+	<string>Post Notification</string>
+	<key>scope</key>
+	<string>meta.implementation.objc, meta.implementation.objc++</string>
+	<key>tabTrigger</key>
+	<string>noti</string>
+	<key>uuid</key>
+	<string>8F0C8A64-44BF-4E84-8257-56CC26DA7558</string>
+</dict>
+</plist>

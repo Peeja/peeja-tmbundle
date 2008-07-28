@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+
+require 'stringio'
+
+lines = STDIN.readlines
+lines.each { |e| e.chomp! }
+maxlength = lines.max { |a,b| a.length &lt;=&gt; b.length }.length
+
+lines.each do |line|
+  padding = ((maxlength - line.length) / 2).floor
+  puts (" " * padding) + line
+end</string>
+	<key>fallbackInput</key>
+	<string>none</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>^@c</string>
+	<key>name</key>
+	<string>Center text</string>
+	<key>output</key>
+	<string>replaceSelectedText</string>
+	<key>scope</key>
+	<string>text.plain</string>
+	<key>uuid</key>
+	<string>8D4966D2-5A3D-45A5-9CA6-D3CDB4ACA466</string>
+</dict>
+</plist>

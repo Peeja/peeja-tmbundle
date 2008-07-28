@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env ruby
+in_signature = false
+output = ""
+
+STDIN.each do |line|
+  line.chomp!
+  line.sub!(/\s*/, "")
+  if !in_signature
+    in_signature = true if line =~ /^(\+|-)/
+  end
+
+  if in_signature
+    output += line.sub(/\s*\{.*$/, "")
+    if line =~ /\{/
+      # Gets rid of the last newline if we
+      # didn't add text two line above.
+      output.chomp!
+      output += ";"
+      in_signature = false
+    end
+    output += "\n"
+  end
+end
+
+open("|pbcopy", "w") { |pbcopy| pbcopy.write output }
+
+puts "Declarations copied to pasteboard."</string>
+	<key>fallbackInput</key>
+	<string>scope</string>
+	<key>input</key>
+	<string>selection</string>
+	<key>keyEquivalent</key>
+	<string>~@I</string>
+	<key>name</key>
+	<string>Copy Method Declarations</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>meta.implementation.objc</string>
+	<key>uuid</key>
+	<string>566FE249-7A98-4D35-B8FA-85DD1A2679DA</string>
+</dict>
+</plist>
